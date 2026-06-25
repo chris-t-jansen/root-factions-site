@@ -17,7 +17,7 @@ I am hoping, at some point, to find a reasonable way to include the AI chat logs
 
 ## License
 
-The source code for this website, insofar as it is mine to license, is licensed under the [MIT License](https://opensource.org/license/MIT). You can find more details in the [GitHub repository](#) for this site.
+The source code for this website, insofar as it is mine to license, is licensed under the [MIT License](https://opensource.org/license/MIT). You can find more details in the [GitHub repository](https://github.com/chris-t-jansen/root-factions-site) for this site.
 
 As stated above, the Root board game, including all artwork and game content, are the property of [Leder Games](https://ledergames.com), and are not mine to license.
 

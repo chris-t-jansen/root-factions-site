@@ -11,7 +11,10 @@
             rel="stylesheet"
         />
         <link rel="icon" href="{{ get_url(path='favicon.ico') }}" sizes="any" />
-        <link rel="apple-touch-icon" href="{{ get_url(path='apple-touch-icon.png') }}" />
+        <link
+            rel="apple-touch-icon"
+            href="{{ get_url(path='apple-touch-icon.png') }}"
+        />
         <link rel="manifest" href="{{ get_url(path='manifest.json') }}" />
         <link rel="stylesheet" href="{{ get_url(path='main.css') }}" />
     </head>
@@ -273,7 +276,12 @@
                                 >Built with Zola</a
                             >
                         </li>
-                        <li><a href="#">View on GitHub</a></li>
+                        <li>
+                            <a
+                                href="https://github.com/chris-t-jansen/root-factions-site"
+                                >View on GitHub</a
+                            >
+                        </li>
                     </ul>
                 </div>
                 <p class="site-footer-disclaimer">
@@ -288,10 +296,10 @@
             </div>
         </footer>
         <script>
-            document.querySelectorAll('a[href^="http"]').forEach(function(a) {
+            document.querySelectorAll('a[href^="http"]').forEach(function (a) {
                 if (a.hostname !== window.location.hostname) {
-                    a.setAttribute('target', '_blank');
-                    a.setAttribute('rel', 'noopener');
+                    a.setAttribute("target", "_blank");
+                    a.setAttribute("rel", "noopener");
                 }
             });
         </script>
