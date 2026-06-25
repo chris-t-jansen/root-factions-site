@@ -5,5 +5,8 @@ public/
 .claude/
 memory/
 
+# Original assets (pre-optimization backups)
+.backup/
+
 # macOS
 .DS_Store
