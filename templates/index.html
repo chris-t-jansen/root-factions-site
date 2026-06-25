@@ -1,0 +1,60 @@
+{% extends "base.html" %} {% block header %}{% endblock %} {% block content %}
+{% set factions = get_section(path="factions/_index.md") %}
+
+<section class="home-hero">
+    <img
+        src="{{ get_url(path='images/root-logo.png') }}"
+        alt="Root"
+        class="hero-logo"
+    />
+    <h1 class="hero-title">Faction Overview</h1>
+    <p class="hero-tagline">
+        An overview of the various factions in Root.
+        <span class="hero-tagline-cta">New to the game? <a href="{{ get_url(path='@/new-to-root.md') }}">Start here.</a></span>
+    </p>
+</section>
+
+<div class="faction-list">
+    {% for page in factions.pages %}
+    <div
+        class="faction-entry"
+        style="--faction-color: {{ page.extra.faction_color }}; --faction-text-color: {{ page.extra.faction_text_color }}"
+    >
+        <div class="faction-entry-inner">
+            <div
+                class="faction-portrait-wrap"
+                style="--wobble-filter: url(#wobbly-edge-{{ loop.index }})"
+            >
+                <div class="portrait-frame-bg"></div>
+                {% if page.extra.image %}
+                <div
+                    class="faction-portrait-circle"
+                    style="background-image: url('{{ get_url(path='images/factions/' ~ page.extra.image) }}'); background-size: {{ page.extra.image_bg_size }};"
+                ></div>
+                {% else %}
+                <div class="faction-portrait-circle">
+                    <div class="faction-portrait-placeholder">
+                        {{ page.title }}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            <div class="faction-entry-text">
+                <p class="faction-entry-expansion">
+                    {{ page.extra.expansion }}
+                </p>
+                <h2 class="faction-entry-name">
+                    <a href="{{ page.permalink }}">{{ page.title }}</a>
+                </h2>
+                <div class="faction-entry-description">
+                    {{ page.extra.short_description | markdown | safe }}
+                </div>
+                <a href="{{ page.permalink }}" class="faction-entry-link"
+                    >Read more</a
+                >
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

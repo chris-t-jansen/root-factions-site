@@ -1,0 +1,9 @@
+# Zola build output
+public/
+
+# Claude Code
+.claude/
+memory/
+
+# macOS
+.DS_Store

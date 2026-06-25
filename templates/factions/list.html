@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="padding-top: 3rem; padding-bottom: 3rem;">
+  <a href="{{ config.base_url }}" class="back-link">Back to all factions</a>
+  <h1 style="font-family: 'Playfair Display', serif; margin-top: 0.5rem;">All Factions</h1>
+  <ul class="faction-list">
+    {% for page in section.pages %}
+    <li>
+      <a href="{{ page.permalink }}" style="color: {{ page.extra.faction_color }}; font-weight: 700;">{{ page.title }}</a>
+      <span style="color: #8B6B4A; font-size: 0.875rem; margin-left: 0.5rem;">{{ page.extra.expansion }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

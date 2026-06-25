@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} — {{ config.title }}{% endblock %}
+
+{% block content %}
+<div class="faction-page" style="--faction-color: {{ page.extra.faction_color }}; --faction-text-color: {{ page.extra.faction_text_color }}">
+
+  <aside class="faction-sidebar">
+    <a href="{{ config.base_url }}" class="faction-sidebar-back">← All factions</a>
+    <div class="faction-portrait-wrap" style="--wobble-filter: url(#wobbly-edge-1)">
+      <div class="portrait-frame-bg"></div>
+      {% if page.extra.image %}
+      <div class="faction-portrait-circle" style="background-image: url('{{ get_url(path='images/factions/' ~ page.extra.image) }}'); background-size: {{ page.extra.image_bg_size }};"></div>
+      {% else %}
+      <div class="faction-portrait-circle">
+        <div class="faction-portrait-placeholder">{{ page.title }}</div>
+      </div>
+      {% endif %}
+    </div>
+    <div class="faction-sidebar-info">
+      <p class="faction-sidebar-expansion">{{ page.extra.expansion }}</p>
+      <h1 class="faction-sidebar-name">{{ page.title }}</h1>
+    </div>
+  </aside>
+
+  <div class="faction-main">
+    {{ page.content | safe }}
+  </div>
+
+</div>
+{% endblock %}

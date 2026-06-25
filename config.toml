@@ -1,0 +1,11 @@
+# Update base_url to match your GitHub Pages URL:
+# - For a project page: https://<username>.github.io/root-factions-site
+# - For a user/org page: https://<username>.github.io
+base_url = "https://chris-t-jansen.github.io/root-factions-site"
+
+title = "The Factions of Root"
+compile_sass = true
+generate_feeds = false
+
+
+[extra]
