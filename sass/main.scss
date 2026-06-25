@@ -172,6 +172,7 @@ a { color: inherit; }
   border-radius: 50%;
   background-color: $color-parchment;
   filter: var(--wobble-filter, url(#wobbly-edge-1)) drop-shadow(0 4px 18px rgba(42, 26, 14, 0.28));
+  will-change: transform;
 }
 
 .faction-portrait-circle {
