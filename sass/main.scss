@@ -20,10 +20,11 @@ $bp-lg: 1000px;
 // ── Reset & Base ──────────────────────────────────────────────────────────────
 
 *, *::before, *::after { box-sizing: border-box; }
-html { font-size: 16px; }
+html { font-size: 16px; overflow-x: hidden; }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background-color: $color-parchment;
   color: $color-text-dark;
   font-family: $font-body;
@@ -166,35 +167,16 @@ a { color: inherit; }
   }
 }
 
-.portrait-frame-bg {
+.portrait-img {
   position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background-color: $color-parchment;
-  filter: var(--wobble-filter, url(#wobbly-edge-1)) drop-shadow(0 4px 18px rgba(42, 26, 14, 0.28));
-  will-change: transform;
-}
-
-.faction-portrait-circle {
-  position: relative;
-  z-index: 1;
-  width: 270px;
-  height: 270px;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: $color-parchment;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  @media (max-width: $bp-md) {
-    width: 204px;
-    height: 204px;
-  }
-
-  @media (max-width: $bp-sm) {
-    width: 224px;
-    height: 224px;
-  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 120px);
+  max-width: none;
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 18px rgba(42, 26, 14, 0.28));
 }
 
 .faction-portrait-placeholder {
@@ -300,16 +282,10 @@ a { color: inherit; }
   height: 100vh;
   overflow-y: auto;
 
-  // Portrait sized to fit sidebar — gap (22px) exceeds displacement scale (18px)
   .faction-portrait-wrap {
     width: 260px;
     height: 260px;
     margin-bottom: 1.25rem;
-  }
-
-  .faction-portrait-circle {
-    width: 216px;
-    height: 216px;
   }
 
   @media (max-width: $bp-md) {
@@ -329,11 +305,6 @@ a { color: inherit; }
       margin-bottom: 0;
     }
 
-    // gap = (190-150)/2 = 20px > 18px displacement scale ✓
-    .faction-portrait-circle {
-      width: 150px;
-      height: 150px;
-    }
   }
 
   @media (max-width: $bp-sm) {
@@ -348,11 +319,6 @@ a { color: inherit; }
       margin-bottom: 1.25rem;
     }
 
-    // gap = (272-224)/2 = 24px > 18px displacement scale ✓
-    .faction-portrait-circle {
-      width: 224px;
-      height: 224px;
-    }
   }
 }
 

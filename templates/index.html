@@ -21,22 +21,11 @@
         style="--faction-color: {{ page.extra.faction_color }}; --faction-text-color: {{ page.extra.faction_text_color }}"
     >
         <div class="faction-entry-inner">
-            <div
-                class="faction-portrait-wrap"
-                style="--wobble-filter: url(#wobbly-edge-{{ loop.index }})"
-            >
-                <div class="portrait-frame-bg"></div>
+            <div class="faction-portrait-wrap">
                 {% if page.extra.image %}
-                <div
-                    class="faction-portrait-circle"
-                    style="background-image: url('{{ get_url(path='images/factions/' ~ page.extra.image) }}'); background-size: {{ page.extra.image_bg_size }};"
-                ></div>
+                <img class="portrait-img" src="{{ get_url(path='images/portraits/' ~ page.extra.image) }}" alt="{{ page.title }} portrait">
                 {% else %}
-                <div class="faction-portrait-circle">
-                    <div class="faction-portrait-placeholder">
-                        {{ page.title }}
-                    </div>
-                </div>
+                <div class="faction-portrait-placeholder">{{ page.title }}</div>
                 {% endif %}
             </div>
             <div class="faction-entry-text">
