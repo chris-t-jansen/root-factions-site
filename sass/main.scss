@@ -1,17 +1,17 @@
 // ── Variables ─────────────────────────────────────────────────────────────────
 
-$color-parchment:      #F7F2E4;
-$color-parchment-dark: #EDE6D0;
-$color-text-dark:      #2A1A0E;
-$color-text-medium:    #5C4033;
-$color-text-light:     #8B6B4A;
-$color-border:         #D4BC96;
-$shadow-sm:            0 2px 12px rgba(42, 26, 14, 0.10);
-$shadow-md:            0 6px 24px rgba(42, 26, 14, 0.16);
+$color-parchment: #f7f2e4;
+$color-parchment-dark: #ede6d0;
+$color-text-dark: #2a1a0e;
+$color-text-medium: #5c4033;
+$color-text-light: #8b6b4a;
+$color-border: #d4bc96;
+$shadow-sm: 0 2px 12px rgba(42, 26, 14, 0.1);
+$shadow-md: 0 6px 24px rgba(42, 26, 14, 0.16);
 
-$font-display:  'Playfair Display', Georgia, serif;
-$font-body:     'Libre Baskerville', Georgia, serif;
-$font-thematic: 'Uncial Antiqua', Georgia, serif;
+$font-display: "Playfair Display", Georgia, serif;
+$font-body: "Libre Baskerville", Georgia, serif;
+$font-thematic: "Uncial Antiqua", Georgia, serif;
 
 $bp-sm: 480px;
 $bp-md: 768px;
@@ -19,598 +19,651 @@ $bp-lg: 1000px;
 
 // ── Reset & Base ──────────────────────────────────────────────────────────────
 
-*, *::before, *::after { box-sizing: border-box; }
-html { font-size: 16px; overflow-x: hidden; }
-
-body {
-  margin: 0;
-  overflow-x: hidden;
-  background-color: $color-parchment;
-  color: $color-text-dark;
-  font-family: $font-body;
-  line-height: 1.7;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
-img { display: block; max-width: 100%; }
-a { color: inherit; }
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: $color-parchment;
+    color: $color-text-dark;
+    font-family: $font-body;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+a {
+    color: inherit;
+}
+
+// ── Game Terms ────────────────────────────────────────────────────────────────
+
+term {
+    font-variant: all-small-caps;
+    font-weight: 700;
+    font-size: 1.2em;
+    line-height: calc(1.7 / 1.2);
+}
 
 // ── Layout ────────────────────────────────────────────────────────────────────
 
 .container {
-  max-width: $bp-lg;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+    max-width: $bp-lg;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
 // ── Site Header (detail pages only) ──────────────────────────────────────────
 
 .site-header {
-  background-color: $color-text-dark;
-  padding: 0.875rem 0;
+    background-color: $color-text-dark;
+    padding: 0.875rem 0;
 
-  .container {
-    display: flex;
-    align-items: center;
-    max-width: none;
-  }
+    .container {
+        display: flex;
+        align-items: center;
+        max-width: none;
+    }
 }
 
 .site-title {
-  font-family: $font-thematic;
-  font-size: 1.5rem;
-  color: $color-parchment;
-  text-decoration: none;
-  letter-spacing: 0.04em;
+    font-family: $font-thematic;
+    font-size: 1.5rem;
+    color: $color-parchment;
+    text-decoration: none;
+    letter-spacing: 0.04em;
 
-  &:hover { color: $color-border; }
+    &:hover {
+        color: $color-border;
+    }
 }
 
 // ── Home Hero ─────────────────────────────────────────────────────────────────
 
 .home-hero {
-  background-color: $color-parchment;
-  padding: 3.5rem 1.5rem 3rem;
-  text-align: center;
-  border-bottom: 1px solid $color-border;
+    background-color: $color-parchment;
+    padding: 3.5rem 1.5rem 3rem;
+    text-align: center;
+    border-bottom: 1px solid $color-border;
 }
 
 .hero-logo {
-  display: block;
-  width: 90%;
-  max-width: 560px;
-  margin: 0 auto 1.75rem;
+    display: block;
+    width: 90%;
+    max-width: 560px;
+    margin: 0 auto 1.75rem;
 }
 
 .hero-title {
-  font-family: $font-thematic;
-  font-size: 2.25rem;
-  color: $color-text-dark;
-  margin: 0 0 0.75rem;
-  letter-spacing: 0.04em;
+    font-family: $font-thematic;
+    font-size: 2.25rem;
+    color: $color-text-dark;
+    margin: 0 0 0.75rem;
+    letter-spacing: 0.04em;
 }
 
 .hero-tagline {
-  font-family: $font-body;
-  font-size: 1rem;
-  color: $color-text-medium;
-  margin: 0 auto;
-  max-width: 540px;
-  line-height: 1.65;
+    font-family: $font-body;
+    font-size: 1rem;
+    color: $color-text-medium;
+    margin: 0 auto;
+    max-width: 540px;
+    line-height: 1.65;
 
-  .hero-tagline-cta { white-space: nowrap; }
+    .hero-tagline-cta {
+        white-space: nowrap;
+    }
 
-  a {
-    color: $color-text-light;
-    text-decoration: none;
+    a {
+        color: $color-text-light;
+        text-decoration: none;
 
-    &:hover { color: $color-text-dark; }
-  }
+        &:hover {
+            color: $color-text-dark;
+        }
+    }
 }
 
 // ── Faction List ──────────────────────────────────────────────────────────────
 
 .faction-list {
-  padding: 0;
+    padding: 0;
 }
 
 .faction-entry {
-  padding: 3.5rem 1.5rem;
-  background-color: var(--faction-color);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  color: var(--faction-text-color, #ffffff);
+    padding: 3.5rem 1.5rem;
+    background-color: var(--faction-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: var(--faction-text-color, #ffffff);
 }
 
 .faction-entry-inner {
-  max-width: $bp-lg;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 3rem;
+    max-width: $bp-lg;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 
-  @media (max-width: $bp-md) {
-    gap: 2rem;
-  }
+    @media (max-width: $bp-md) {
+        gap: 2rem;
+    }
 
-  @media (max-width: $bp-sm) {
-    flex-direction: column;
-    text-align: center;
-  }
+    @media (max-width: $bp-sm) {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .faction-entry:nth-child(even) .faction-entry-inner {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 
-  @media (max-width: $bp-sm) {
-    flex-direction: column;
-  }
+    @media (max-width: $bp-sm) {
+        flex-direction: column;
+    }
 }
 
 // ── Portrait Circle ───────────────────────────────────────────────────────────
 
 .faction-portrait-wrap {
-  flex-shrink: 0;
-  position: relative;
-  width: 320px;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  @media (max-width: $bp-md) {
-    width: 250px;
-    height: 250px;
-  }
+    @media (max-width: $bp-md) {
+        width: 250px;
+        height: 250px;
+    }
 
-  @media (max-width: $bp-sm) {
-    width: 272px;
-    height: 272px;
-  }
+    @media (max-width: $bp-sm) {
+        width: 272px;
+        height: 272px;
+    }
 }
 
 .portrait-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% + 120px);
-  max-width: none;
-  height: auto;
-  pointer-events: none;
-  filter: drop-shadow(0 4px 18px rgba(42, 26, 14, 0.28));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 120px);
+    max-width: none;
+    height: auto;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 18px rgba(42, 26, 14, 0.28));
 }
 
 .faction-portrait-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.85);
-  font-family: $font-display;
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: center;
-  padding: 1rem;
-  line-height: 1.3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: $font-display;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    line-height: 1.3;
 }
 
 // ── Faction Entry Text ────────────────────────────────────────────────────────
 
 .faction-entry-text {
-  flex: 1;
-  min-width: 0;
+    flex: 1;
+    min-width: 0;
 }
 
 .faction-entry-expansion {
-  font-family: $font-body;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: inherit;
-  opacity: 0.7;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin: 0 0 0.35rem;
+    font-family: $font-body;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: inherit;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.35rem;
 }
 
 .faction-entry-name {
-  font-family: $font-thematic;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  color: inherit;
-  margin: 0 0 0.9rem;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-
-  a {
-    text-decoration: none;
+    font-family: $font-thematic;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     color: inherit;
-    transition: opacity 0.15s ease;
+    margin: 0 0 0.9rem;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
 
-    &:hover { opacity: 0.8; }
-  }
+    a {
+        text-decoration: none;
+        color: inherit;
+        transition: opacity 0.15s ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
 
 .faction-entry-description {
-  font-size: 0.975rem;
-  color: inherit;
-  opacity: 0.88;
-  line-height: 1.8;
-  margin: 0 0 1.25rem;
+    font-size: 0.975rem;
+    color: inherit;
+    opacity: 0.88;
+    line-height: 1.8;
+    margin: 0 0 1.25rem;
 
-  p { margin: 0; }
-  p + p { margin-top: 0.75rem; }
+    p {
+        margin: 0;
+    }
+    p + p {
+        margin-top: 0.75rem;
+    }
 }
 
 .faction-entry-link {
-  display: inline-block;
-  color: inherit;
-  font-family: $font-body;
-  font-weight: 600;
-  font-size: 0.825rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  padding-bottom: 2px;
-  border-bottom: 1.5px solid currentColor;
-  opacity: 0.8;
-  transition: opacity 0.15s ease;
+    display: inline-block;
+    color: inherit;
+    font-family: $font-body;
+    font-weight: 600;
+    font-size: 0.825rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    padding-bottom: 2px;
+    border-bottom: 1.5px solid currentColor;
+    opacity: 0.8;
+    transition: opacity 0.15s ease;
 
-  &:hover { opacity: 1; }
+    &:hover {
+        opacity: 1;
+    }
 }
 
 // ── Faction Detail Page ───────────────────────────────────────────────────────
 
 .faction-page {
-  display: flex;
-  align-items: flex-start;
+    display: flex;
+    align-items: flex-start;
 
-  @media (max-width: $bp-md) {
-    flex-direction: column;
-  }
+    @media (max-width: $bp-md) {
+        flex-direction: column;
+    }
 }
 
 .faction-sidebar {
-  width: 320px;
-  flex-shrink: 0;
-  background-color: var(--faction-color);
-  min-height: 100vh;
-  padding: 1.5rem 1.5rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow-y: auto;
-
-  .faction-portrait-wrap {
-    width: 260px;
-    height: 260px;
-    margin-bottom: 1.25rem;
-  }
-
-  @media (max-width: $bp-md) {
-    width: 100%;
-    height: auto;
-    min-height: unset;
-    position: static;
-    flex-direction: row;
-    align-items: center;
-    padding: 1.75rem 1.5rem;
-    gap: 1.5rem;
-
-    .faction-portrait-wrap {
-      width: 190px;
-      height: 190px;
-      flex-shrink: 0;
-      margin-bottom: 0;
-    }
-
-  }
-
-  @media (max-width: $bp-sm) {
+    width: 320px;
+    flex-shrink: 0;
+    background-color: var(--faction-color);
+    min-height: 100vh;
+    padding: 1.5rem 1.5rem 2.5rem;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0;
-    padding-bottom: 1.2rem;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
 
     .faction-portrait-wrap {
-      width: 272px;
-      height: 272px;
-      margin-bottom: 1.25rem;
+        width: 260px;
+        height: 260px;
+        margin-bottom: 1.25rem;
     }
 
-  }
+    @media (max-width: $bp-md) {
+        width: 100%;
+        height: auto;
+        min-height: unset;
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        padding: 1.75rem 1.5rem;
+        gap: 1.5rem;
+
+        .faction-portrait-wrap {
+            width: 190px;
+            height: 190px;
+            flex-shrink: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    @media (max-width: $bp-sm) {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding-bottom: 1.2rem;
+
+        .faction-portrait-wrap {
+            width: 272px;
+            height: 272px;
+            margin-bottom: 1.25rem;
+        }
+    }
 }
 
 .faction-sidebar-info {
-  text-align: left;
-  color: var(--faction-text-color, #ffffff);
-  width: 100%;
+    text-align: left;
+    color: var(--faction-text-color, #ffffff);
+    width: 100%;
 }
 
 .faction-sidebar-expansion {
-  font-family: $font-body;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  opacity: 0.75;
-  margin: 0 0 0.4rem;
+    font-family: $font-body;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.75;
+    margin: 0 0 0.4rem;
 }
 
 .faction-sidebar-name {
-  font-family: $font-thematic;
-  font-size: 1.5rem;
-  letter-spacing: 0.04em;
-  line-height: 1.25;
-  margin: 0 0 1.5rem;
-
-  @media (max-width: $bp-md) {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
-    margin-bottom: 0;
-  }
-
-  @media (max-width: $bp-sm) {
+    font-family: $font-thematic;
     font-size: 1.5rem;
-    margin-bottom: 0.1rem;
-  }
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+    margin: 0 0 1.5rem;
+
+    @media (max-width: $bp-md) {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+        margin-bottom: 0;
+    }
+
+    @media (max-width: $bp-sm) {
+        font-size: 1.5rem;
+        margin-bottom: 0.1rem;
+    }
 }
 
 .faction-sidebar-back {
-  display: inline-block;
-  color: var(--faction-text-color, #ffffff);
-  opacity: 0.65;
-  text-decoration: none;
-  font-family: $font-body;
-  font-size: 0.8rem;
-  margin-bottom: 1.5rem;
-
-  &:hover { opacity: 1; }
-
-  @media (max-width: $bp-md) {
-    display: none;
-  }
-
-  @media (max-width: $bp-sm) {
     display: inline-block;
-    order: 3;
-    align-self: flex-start;
-    margin-top: 0.55rem;
-    margin-bottom: 0;
-    font-size: 0.925rem;
-  }
+    color: var(--faction-text-color, #ffffff);
+    opacity: 0.65;
+    text-decoration: none;
+    font-family: $font-body;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @media (max-width: $bp-md) {
+        display: none;
+    }
+
+    @media (max-width: $bp-sm) {
+        display: inline-block;
+        order: 3;
+        align-self: flex-start;
+        margin-top: 0.55rem;
+        margin-bottom: 0;
+        font-size: 0.925rem;
+    }
 }
 
 // ── Faction Main Content ──────────────────────────────────────────────────────
 
 .faction-main {
-  flex: 1;
-  min-width: 0;
-  padding: 2.5rem max(2rem, calc(50% - 550px)) 4rem;
+    flex: 1;
+    min-width: 0;
+    padding: 2.5rem max(2rem, calc(50% - 550px)) 4rem;
 
-  p {
-    font-family: $font-body;
-    color: $color-text-medium;
-    line-height: 1.85;
-    margin: 0 0 1.25rem;
-  }
-
-  h2 {
-    font-family: $font-thematic;
-    font-size: 1.35rem;
-    letter-spacing: 0.04em;
-    color: $color-text-dark;
-    margin: 2.5rem 0 0.75rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 2px solid var(--faction-color);
-
-    &:first-child { margin-top: 0; }
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      padding: 0.45rem 0;
-      border-bottom: 1px solid $color-parchment-dark;
-      font-size: 0.95rem;
-      color: $color-text-medium;
-
-      &:last-child { border-bottom: none; }
+    p {
+        font-family: $font-body;
+        color: $color-text-medium;
+        line-height: 1.85;
+        margin: 0 0 1.25rem;
     }
 
-    a {
-      color: var(--faction-color);
-      font-weight: 600;
-      text-decoration: none;
+    h2 {
+        font-family: $font-thematic;
+        font-size: 1.35rem;
+        letter-spacing: 0.04em;
+        color: $color-text-dark;
+        margin: 2.5rem 0 0.75rem;
+        padding-bottom: 0.4rem;
+        border-bottom: 2px solid var(--faction-color);
 
-      &:hover { text-decoration: underline; }
+        &:first-child {
+            margin-top: 0;
+        }
     }
-  }
 
-  @media (max-width: $bp-md) {
-    padding: 2rem 1.5rem 3rem;
-  }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 0.45rem 0;
+            border-bottom: 1px solid $color-parchment-dark;
+            font-size: 0.95rem;
+            color: $color-text-medium;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        a {
+            color: var(--faction-color);
+            font-weight: 600;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @media (max-width: $bp-md) {
+        padding: 2rem 1.5rem 3rem;
+    }
 }
 
 // ── Faction Index List ─────────────────────────────────────────────────────────
 
 .faction-list-index {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0 0;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
 
-  li {
-    padding: 0.6rem 0;
-    border-bottom: 1px solid $color-border;
-    font-size: 1rem;
+    li {
+        padding: 0.6rem 0;
+        border-bottom: 1px solid $color-border;
+        font-size: 1rem;
 
-    &:last-child { border-bottom: none; }
-  }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
 }
 
 // ── Static Pages ──────────────────────────────────────────────────────────────
 
 .page-content {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 4rem;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
 
-  h1 {
-    font-family: $font-thematic;
-    font-size: 2rem;
-    letter-spacing: 0.04em;
-    color: $color-text-dark;
-    margin: 0 0 2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid $color-border;
-  }
-
-  h2 {
-    font-family: $font-thematic;
-    font-size: 1.35rem;
-    letter-spacing: 0.04em;
-    color: $color-text-dark;
-    margin: 2.5rem 0 0.75rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid $color-border;
-  }
-
-  h3 {
-    font-family: $font-display;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: $color-text-dark;
-    margin: 1.75rem 0 0.5rem;
-  }
-
-  p {
-    font-family: $font-body;
-    color: $color-text-medium;
-    line-height: 1.85;
-    margin: 0 0 1.25rem;
-  }
-
-  a {
-    color: $color-text-dark;
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: $color-border;
-
-    &:hover { color: $color-text-medium; }
-  }
-
-  a.quiet-link {
-    color: $color-text-light;
-    font-weight: normal;
-    text-decoration: none;
-
-    &:hover { color: $color-text-dark; }
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.25rem;
-
-    li {
-      font-family: $font-body;
-      color: $color-text-medium;
-      line-height: 1.85;
-      margin-bottom: 0.4rem;
-      padding-left: 1.4rem;
-      position: relative;
-
-      &::before {
-        content: "\2767";
-        color: $color-border;
-        position: absolute;
-        left: 0;
-      }
+    h1 {
+        font-family: $font-thematic;
+        font-size: 2rem;
+        letter-spacing: 0.04em;
+        color: $color-text-dark;
+        margin: 0 0 2rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid $color-border;
     }
-  }
 
-  @media (max-width: $bp-md) {
-    padding: 2rem 1.5rem 3rem;
-  }
+    h2 {
+        font-family: $font-thematic;
+        font-size: 1.35rem;
+        letter-spacing: 0.04em;
+        color: $color-text-dark;
+        margin: 2.5rem 0 0.75rem;
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid $color-border;
+    }
+
+    h3 {
+        font-family: $font-display;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $color-text-dark;
+        margin: 1.75rem 0 0.5rem;
+    }
+
+    p {
+        font-family: $font-body;
+        color: $color-text-medium;
+        line-height: 1.85;
+        margin: 0 0 1.25rem;
+    }
+
+    a {
+        color: $color-text-dark;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-color: $color-border;
+
+        &:hover {
+            color: $color-text-medium;
+        }
+    }
+
+    a.quiet-link {
+        color: $color-text-light;
+        font-weight: normal;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-text-dark;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.25rem;
+
+        li {
+            font-family: $font-body;
+            color: $color-text-medium;
+            line-height: 1.85;
+            margin-bottom: 0.4rem;
+            padding-left: 1.4rem;
+            position: relative;
+
+            &::before {
+                content: "\2767";
+                color: $color-border;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    @media (max-width: $bp-md) {
+        padding: 2rem 1.5rem 3rem;
+    }
 }
 
 // ── Site Footer ────────────────────────────────────────────────────────────────
 
 .site-footer {
-  background-color: $color-text-dark;
-  color: $color-text-light;
-  padding: 1.5rem 0;
-  font-size: 0.8rem;
-  font-family: $font-body;
-  line-height: 1.6;
+    background-color: $color-text-dark;
+    color: $color-text-light;
+    padding: 1.5rem 0;
+    font-size: 0.8rem;
+    font-family: $font-body;
+    line-height: 1.6;
 
-  a {
-    color: $color-border;
-    text-decoration: none;
+    a {
+        color: $color-border;
+        text-decoration: none;
 
-    &:hover { color: $color-parchment; }
-  }
-
-  .container {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-
-    @media (max-width: $bp-md) {
-      flex-direction: column;
-      gap: 1rem;
-      text-align: center;
+        &:hover {
+            color: $color-parchment;
+        }
     }
-  }
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+
+        @media (max-width: $bp-md) {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+    }
 }
 
 .site-footer-links {
-  flex-shrink: 0;
+    flex-shrink: 0;
 
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    padding: 0.1rem 0;
-    display: flex;
-    align-items: baseline;
-    gap: 0.4rem;
-
-    &::before {
-      content: "\2767";
-      color: $color-text-light;
-      flex-shrink: 0;
-    }
-  }
-
-  a { font-weight: 600; }
-
-  @media (max-width: $bp-md) {
     ul {
-      display: flex;
-      gap: 1.25rem;
-      flex-wrap: wrap;
-      justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
-    li::before { display: none; }
-  }
+    li {
+        padding: 0.1rem 0;
+        display: flex;
+        align-items: baseline;
+        gap: 0.4rem;
+
+        &::before {
+            content: "\2767";
+            color: $color-text-light;
+            flex-shrink: 0;
+        }
+    }
+
+    a {
+        font-weight: 600;
+    }
+
+    @media (max-width: $bp-md) {
+        ul {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        li::before {
+            display: none;
+        }
+    }
 }
 
 .site-footer-disclaimer {
-  flex: 1;
-  margin: 0;
-  text-align: right;
-  opacity: 0.75;
+    flex: 1;
+    margin: 0;
+    text-align: right;
+    opacity: 0.75;
 
-  @media (max-width: $bp-md) {
-    text-align: center;
-  }
+    @media (max-width: $bp-md) {
+        text-align: center;
+    }
 }
