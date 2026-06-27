@@ -39,6 +39,8 @@ I am hoping, at some point, to find a reasonable way to include the AI chat logs
 
 The Root board game is designed by [Cole Wehrle](https://buriedgiant.com/), with art by [Kyle Ferrin](https://kyleferrin.bigcartel.com/), and published by [Leder Games](https://ledergames.com). All faction names, artwork, and game content are the property of Leder Games. This website is an unofficial fan site, and is not affiliated with or endorsed by Leder Games.
 
+The Root image assets found throughout this site, including the Root logo and the Root faction character artworks, are from the media kits made available by Leder Games on their [Resources page](https://ledergames.com/pages/resources).
+
 ### Fonts
 
 The fonts used throughout this website are used under the terms of the [SIL Open Font License Version 1.1 (OPL-1.1)](https://openfontlicense.org/open-font-license-official-text/). The following fonts are used in the site:

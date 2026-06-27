@@ -9,6 +9,8 @@ template = "page.html"
 
 Root is designed by [Cole Wehrle](https://buriedgiant.com/), with art by [Kyle Ferrin](https://kyleferrin.bigcartel.com/), and published by [Leder Games](https://ledergames.com). All faction names, artwork, and game content are the property of Leder Games. This website is an unofficial fan site and is not affiliated with, or endorsed by, Leder Games.
 
+The Root image assets found throughout this site, including the Root logo and the Root faction character artworks, are from the media kits made available by Leder Games on their [Resources page](https://ledergames.com/pages/resources).
+
 ## AI Usage Disclosure
 
 This website was made with the assistance of artificial intelligence (AI), namely Anthropic's [Claude](https://claude.com/). AI was used in creating the layout, styling, and functionality of this website, but did not generate any of the written content. All of that was written by me, [the author](https://github.com/chris-t-jansen).
