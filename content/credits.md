@@ -13,7 +13,7 @@ The Root image assets found throughout this site, including the Root logo and th
 
 ## AI Usage Disclosure
 
-This website was made with the assistance of artificial intelligence (AI), namely Anthropic's [Claude](https://claude.com/). AI was used in creating the layout, styling, and functionality of this website, but did not generate any of the written content. All of that was written by me, [the author](https://github.com/chris-t-jansen).
+This website was made with the assistance of artificial intelligence (AI), namely Anthropic's [Claude](https://claude.com/). AI was used in creating the layout, styling, and functionality of this website, but did not generate any of the written content. All of that was written by me, [the author](https://github.com/chris-t-jansen). I have also personally read all the code for this website.
 
 I am hoping, at some point, to find a reasonable way to include the AI chat logs involved in the creation of this site, but so far haven't found a good way to achieve that. If I do, I'll update this section to include links to those.
 

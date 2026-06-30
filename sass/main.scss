@@ -46,6 +46,23 @@ a {
     color: inherit;
 }
 
+h2 {
+    font-family: $font-thematic;
+    font-size: 1.35rem;
+    letter-spacing: 0.04em;
+    color: $color-text-dark;
+    margin: 2.5rem 0 0.75rem;
+    padding-bottom: 0.4rem;
+}
+
+h3 {
+    font-family: $font-display;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $color-text-dark;
+    margin: 1.75rem 0 0.5rem;
+}
+
 // ── Game Terms ────────────────────────────────────────────────────────────────
 
 term {
@@ -297,9 +314,11 @@ term {
 .faction-page {
     display: flex;
     align-items: flex-start;
+    background-image: linear-gradient(to right, var(--faction-color) 320px, $color-parchment 320px);
 
     @media (max-width: $bp-md) {
         flex-direction: column;
+        background-image: none;
     }
 }
 
@@ -316,11 +335,12 @@ term {
     top: 0;
     height: 100vh;
     overflow-y: auto;
+    overflow-x: hidden;
 
     .faction-portrait-wrap {
         width: 260px;
         height: 260px;
-        margin-bottom: 1.25rem;
+        margin: 0 auto 1.25rem;
     }
 
     @media (max-width: $bp-md) {
@@ -431,12 +451,6 @@ term {
     }
 
     h2 {
-        font-family: $font-thematic;
-        font-size: 1.35rem;
-        letter-spacing: 0.04em;
-        color: $color-text-dark;
-        margin: 2.5rem 0 0.75rem;
-        padding-bottom: 0.4rem;
         border-bottom: 2px solid var(--faction-color);
 
         &:first-child {
@@ -512,21 +526,7 @@ term {
     }
 
     h2 {
-        font-family: $font-thematic;
-        font-size: 1.35rem;
-        letter-spacing: 0.04em;
-        color: $color-text-dark;
-        margin: 2.5rem 0 0.75rem;
-        padding-bottom: 0.4rem;
         border-bottom: 1px solid $color-border;
-    }
-
-    h3 {
-        font-family: $font-display;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: $color-text-dark;
-        margin: 1.75rem 0 0.5rem;
     }
 
     p {
@@ -548,15 +548,6 @@ term {
         }
     }
 
-    a.quiet-link {
-        color: $color-text-light;
-        font-weight: normal;
-        text-decoration: none;
-
-        &:hover {
-            color: $color-text-dark;
-        }
-    }
 
     ul {
         list-style: none;
@@ -582,6 +573,18 @@ term {
 
     @media (max-width: $bp-md) {
         padding: 2rem 1.5rem 3rem;
+    }
+}
+
+// ── Quiet Links ───────────────────────────────────────────────────────────────
+
+a.quiet-link {
+    color: $color-text-light;
+    font-weight: normal;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-text-dark;
     }
 }
 
