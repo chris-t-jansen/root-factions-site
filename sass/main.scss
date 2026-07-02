@@ -31,7 +31,7 @@ html {
 
 body {
     margin: 0;
-    overflow-x: hidden;
+    overflow-x: clip;
     background-color: $color-parchment;
     color: $color-text-dark;
     font-family: $font-body;
