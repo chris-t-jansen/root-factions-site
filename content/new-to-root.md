@@ -21,3 +21,4 @@ While a tutorial for the game of Root is outside the scope of this site, there a
 ### Miscellaneous
 
 - [Root: The Woodland Companion](https://root.seiyria.com/) — Though essentially just a digitized version of the Law of Root (see above), this site is far better laid out for the web, including anchored links for each individual rule, making it much easier to share links to specific sections.
+- [Root Automated Setup](https://ewendc.github.io/root-automated-setup/) — A great tool from *EwenDC* that handles all the specifics of setting up a game of Root using the Advanced Setup rules. Just pick the options you want to play with and follow the instructions to get everything set up in a breeze!
