@@ -19,3 +19,13 @@ As the Woodland Alliance, your aim isn't to establish strongholds or raise armie
 Your sympathy tokens also impede your opponents as sympathetic clearings become intolerant of their military actions. Whenever an opponent moves warriors into a clearing with a sympathy token or removes the sympathy token (such as by battling), they spark <term>outrage</term>, forcing them to pay a card from their hand matching the clearing's suit into your supporter deck. If they can't pay, they show you their hand as proof, and you draw the top card of the deck and place it in your supporter deck.
 
 With both sympathy and support, you can leverage your influence to a more destructive end: <term>revolt</term>. A revolt immediately removes all non-Woodland Alliance pieces and establishes a <term>base</term>, your foothold in the Woodland for more militaristic action. You only have three bases total, one for each of the three clearing suits, but having a base on the map lifts the five-card limit on your supporter deck. Bases also allow you to train <term>officers</term>, warriors placed on your faction board that allow you to take actions such as **Recruit**, placing warriors at a base, and **Organize**, allowing you to replace a warrior with a sympathy token in a clearing without one, bypassing the supporter cost.
+
+## Strategy
+
+As the Woodland Alliance, your strategy is both singular and straightforward: place sympathy tokens. Your track of sympathy tokens alone is worth 22 victory points, ignoring the reality that tokens will be removed and replaced, earning you those points again. Given that, your strategy should focus on always being able to continue placing sympathy tokens.
+
+### The Opening
+
+Starting the game with nothing on the board keeps the Woodland Alliance's opening fairly standard: use the three starting cards in your supporter deck to place three sympathy tokens on the map, then Mobilize the three starting cards in your hand to your supporter deck. Finally, on the following turn, spend two of those supporter cards to revolt in one of the three clearings you placed sympathy tokens in to establish your first base.
+
+This opening is more nuanced than it sounds, and it immediately confronts you with the core question of the Woodland Alliance, which is where to place your sympathy tokens. It can be tempting to place your tokens in very central clearings, but a particularly inconvenient sympathy token may get removed by an irritated opponent.
