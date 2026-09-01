@@ -7,13 +7,7 @@
 
   <aside class="faction-sidebar">
     <a href="{{ config.base_url }}" class="faction-sidebar-back">← All factions</a>
-    <div class="faction-portrait-wrap">
-      {% if page.extra.image %}
-      <img class="portrait-img" src="{{ get_url(path='images/portraits/' ~ page.extra.image) }}" alt="{{ page.title }} portrait">
-      {% else %}
-      <div class="faction-portrait-placeholder">{{ page.title }}</div>
-      {% endif %}
-    </div>
+    {{<faction_portrait title={page.title} image={page.extra.image} />}}
     <div class="faction-sidebar-info">
       <p class="faction-sidebar-expansion">{{ page.extra.expansion }}</p>
       <h1 class="faction-sidebar-name">{{ page.title }}</h1>

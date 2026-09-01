@@ -1,0 +1,27 @@
+{% component faction_portrait(title: string, image) %}
+<div class="faction-portrait-wrap">
+    {% if image %}
+    <img
+        class="portrait-img"
+        src="{{ get_url(path='images/portraits/' ~ image) }}"
+        alt="{{ title }} portrait"
+    />
+    {% else %}
+    <div class="faction-portrait-placeholder">{{ title }}</div>
+    {% endif %}
+</div>
+{% endcomponent faction_portrait %}
+
+{# External quiet link — passes URL through directly and opens in a new tab. For internal links use iql.html. #}
+{% component eql(url: string) %}
+<a href="{{ url }}" class="quiet-link" target="_blank" rel="noopener">
+    {{ body }}
+</a>
+{% endcomponent eql %}
+
+{# Internal quiet link — resolves Zola @/ paths via get_url(). For external links use eql.html. #}
+{% component iql(url: string) %}
+<a href="{{ get_url(path=url) }}" class="quiet-link">
+    {{ body }}
+</a>
+{% endcomponent iql %}
