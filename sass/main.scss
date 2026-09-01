@@ -577,14 +577,16 @@ term {
 }
 
 // ── Quiet Links ───────────────────────────────────────────────────────────────
-
-a.quiet-link {
-    color: $color-text-light;
-    font-weight: normal;
-    text-decoration: none;
+// !important: quiet is a deliberate per-link override of the ambient loud
+// list-link styling above, and must always win regardless of the ancestor
+// context it's used in (e.g. inside .faction-main ul, where loud is the default).
+ql a {
+    color: $color-text-light !important;
+    font-weight: normal !important;
+    text-decoration: none !important;
 
     &:hover {
-        color: $color-text-dark;
+        color: $color-text-dark !important;
     }
 }
 
