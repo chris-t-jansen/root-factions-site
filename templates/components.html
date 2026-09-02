@@ -11,3 +11,68 @@
     {% endif %}
 </div>
 {% endcomponent faction_portrait %}
+
+{% component under_construction() %}
+<div class="under-construction-callout">
+    <style>
+        .under-construction-callout {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            box-sizing: border-box;
+            width: fit-content;
+            margin: 1.5rem 0;
+            padding: 0.75rem 1.25rem;
+            border: 1px solid #e3c565;
+            border-radius: 12px;
+            background-color: #fdf3d0;
+            box-shadow: 0 2px 12px rgba(42, 26, 14, 0.1);
+            color: #2a1a0e;
+        }
+        .under-construction-callout__icon {
+            flex-shrink: 0;
+            font-size: 3.5rem;
+            line-height: 1;
+        }
+        .under-construction-callout__text {
+            text-align: left;
+            padding: 0 0.3rem;
+        }
+        .under-construction-callout__header {
+            margin: 0 !important;
+            line-height: 1.15 !important;
+            font-family: "Uncial Antiqua", Georgia, serif !important;
+            font-size: 1.3rem;
+            letter-spacing: 0.02em;
+            color: #2a1a0e !important;
+        }
+        .under-construction-callout__subtext {
+            margin: 0.4rem 0 0 !important;
+            line-height: 1.15 !important;
+            font-family: "Libre Baskerville", Georgia, serif !important;
+            font-size: 1rem;
+            color: #2a1a0e !important;
+        }
+        @media (max-width: 480px) {
+            .under-construction-callout {
+                padding: 0.65rem 1rem;
+                gap: 0.65rem;
+            }
+            .under-construction-callout__icon {
+                font-size: 2.75rem;
+            }
+            .under-construction-callout__header {
+                font-size: 1.15rem;
+            }
+            .under-construction-callout__subtext {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+    <span class="under-construction-callout__icon" aria-hidden="true">⚠️</span>
+    <div class="under-construction-callout__text">
+        <div class="under-construction-callout__header">Under Construction</div>
+        <div class="under-construction-callout__subtext">Nothing here yet, check back later!</div>
+    </div>
+</div>
+{% endcomponent under_construction %}

@@ -12,6 +12,6 @@ image_bg_size = "74.20% auto"
 short_description = "Emerging from their subterranean kingdom, the Underground Duchy is prepared to bring order to the chaos of the Woodland above, but will need political support at home to do it. Reveal cards to sway <term>ministers</term>, earning you victory points and additional actions, but be careful to defend your buildings, as losing one will erode your support back home."
 +++
 
-## Under Construction...
+## Overview
 
-Nothing here yet, check back later!
+{{<under_construction />}}

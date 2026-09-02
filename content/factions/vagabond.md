@@ -12,6 +12,6 @@ image_bg_size = "71.98% auto"
 short_description = "Some Woodland residents pledge allegiance to no faction, striking out on their own as a lone, wandering Vagabond playing all sides. Slip through the forests to travel afar, collect <term>items</term> to expand your capabilities, complete <term>quests</term> to help the Woodland denizens, and build your <term>relationships</term> with or against the various warring factions to come out on top."
 +++
 
-## Under Construction...
+## Overview
 
-Nothing here yet, check back later!
+{{<under_construction />}}
