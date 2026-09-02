@@ -6,7 +6,7 @@ This repository contains the source code for "The Factions of Root", a static we
 
 ### Prerequisites
 
-This site is built with [Zola](https://www.getzola.org/), a static-site generator written in Rust. To install Zola, follow the instructions on their [Installation](https://www.getzola.org/documentation/getting-started/installation/) page. This site was built with Zola version 0.22.1.
+This site is built with [Zola](https://www.getzola.org/), a static-site generator written in Rust. To install Zola, follow the instructions on their [Installation](https://www.getzola.org/documentation/getting-started/installation/) page. This site was built with Zola version 0.23.4.
 
 ### Making changes
 
